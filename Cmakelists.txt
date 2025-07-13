@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.15)
+project(OpenCV_Playground)
+
+# 手动设置 vcpkg 的库路径（根据你的实际安装位置调整）
+set(OpenCV_DIR "D:/opencv/opencv_build/install/x64/mingw/lib")
+
+find_package(OpenCV REQUIRED)
+message(STATUS "OpenCV version: ${OpenCV_VERSION}")
+
+add_executable(${PROJECT_NAME} src/main.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
+target_include_directories(${PROJECT_NAME} PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
+file(COPY res DESTINATION ${CMAKE_BINARY_DIR})
