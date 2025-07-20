@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "opencv3.5.2",
+            "command": "D:\\migw\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}\\Debugger\\${fileBasenameNoExtension}.exe",
+                //上面这个Debugger是我自己定义的，为了方便放置生成的exe文件
+                "D:/opencv/opencv_build/install/x64/mingw/bin/libopencv_world4120.dll",
+                "-I",
+                "D:\\opencv\\opencv_build\\install\\include",
+                "-I",
+                "D:\\opencv\\opencv_build\\install\\include\\opencv2",
+            ],
+            "options": {
+                "cwd": "D:\\migw\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
