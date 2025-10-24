@@ -3,7 +3,7 @@
 
 
 int main() {
-    constexpr auto image_path = "res/image.png";
+    constexpr auto image_path = "res/1.png";
     cv::Mat image = cv::imread(image_path, cv::IMREAD_COLOR);
 
     if (image.empty()) {
