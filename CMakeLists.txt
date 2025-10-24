@@ -4,7 +4,7 @@ project(OpenCV_Playground)
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
+set(OpenCV_DIR "D:/opencv/opencv_build/install/x64/mingw/lib")
 # 查找 OpenCV 包
 find_package(OpenCV REQUIRED)
 message(STATUS "OpenCV version: ${OpenCV_VERSION}")
